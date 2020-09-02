@@ -1,0 +1,201 @@
+:root{
+    --clr-main:#174d6a;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color:white;
+}
+/*==============Whole Body==============*/
+.first_section{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+/*================Please Enter Your Budget==========*/
+.total_amount{
+    margin: 2em 2em 2em 2em;
+    border: 2px solid green;
+    width: 200px;
+    height: 100px;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; */
+}
+
+
+
+.arrange{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+}
+#total_amount{
+    margin:5px;
+}
+.arrange button{
+    margin: 5px;
+    align-self:flex-start ;
+    border: 1px solid green;
+    background-color: white;
+}
+.arrange label{
+    margin: 5px;
+}
+
+/*==================Expenses============*/
+.expenses_amount{
+
+    
+    
+    max-width:90%; 
+    margin:2em;
+    border: 2px solid red;
+}
+
+
+.enter_expenses label{
+    margin:0 0 15px 0;
+}
+.enter_expenses{
+    
+    margin: 5px auto 10px auto;
+    padding: 10px;
+}
+
+.expenses{
+    margin:10px;
+}
+
+.enter_expenses label{
+    margin:0 0 15px 0;
+}
+
+.amount{
+    margin:10px;
+}
+.button{
+    margin:0px 0px 10px 10px;
+}
+
+
+.button button{
+    background-color: white;
+    border: 1px solid red;
+    margin: 0px 10px 0px 10px;
+}
+
+
+
+button{
+    display: inline-block;
+    position: relative;
+    width: auto;
+    
+}
+/*=================Output==================*/
+  
+.output{
+    display:flex ;
+    flex-direction: row;
+    justify-content:space-between ;
+    align-content: space-between;
+    align-items: stretch;
+    margin: 5px 10px;
+}
+
+.money{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.first{
+    color:green;
+}
+.second{
+    color:red;
+}
+
+.third{
+    color: black;
+}
+.output_text{
+    display: flex;
+    
+    justify-content: space-around;
+}
+
+.expense_value p{
+   
+   
+   margin-right: 20px;
+}
+.fa-trash{
+    
+    margin-left:4rem;
+    color: red;
+
+}
+.fa-trash:hover{
+    color: hotpink;
+
+}
+
+@media(min-width:600px){
+      .container_section{
+          display: grid;
+          gap: 0;
+          grid-template-columns: 1fr 1.5fr ;
+      }
+
+    .first_section{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        display:grid;
+        margin-right: 0;
+        
+    }
+    .second_section{
+        grid-row: 1/2;
+        grid-column: 2/3;
+        margin-left: 0 100px 0 0;
+        
+    }
+    .total_amount{
+    
+    
+        min-width:60%;
+        max-width: 80%;
+        }
+    .expenses_amount{
+       flex-direction: column;
+       border: 2px solid red;
+       max-width: 60%;
+       margin: 2em;
+    
+    }
+    .enter_expenses{
+        display: flex;
+        flex-direction: column;
+        margin:5px;
+        padding: 0;
+        
+    }
+    .expenses{
+        margin:5px;
+    }
+    .amount{
+        margin:5px ;
+    }
+    button.add_expense{
+        margin:5px 10px;
+    }
+    
+}
