@@ -25,28 +25,53 @@ culculate.addEventListener("click", () => {
 
 const addExpense = document.querySelector(".add_expense");
 
-/*==create paragraphs===*/
-const expenseTitleParagraph = document.createElement("p");
+
+
+
+
+
+addExpense.addEventListener("click", () => {
+
+  dispExpenses.textContent = +dispExpenses.textContent + +expenseAmount.value;
+  dispBalance.textContent = budget.value - dispExpenses.textContent;
+  /*==create paragraphs===*/
+  const expenseTitleParagraph = document.createElement("p");
 const expenseValueParagraph = document.createElement("p");
 
 expenseTitleParagraph.textContent = expenseType.value;
 expenseValueParagraph.textContent = expenseAmount.value;
 
+expenseTitleDiv.appendChild(expenseTitleParagraph);
+expenseValueDiv.appendChild(expenseValueParagraph);
+
+/*=======create delete button=====*/
+const button = document.createElement("button");
+button.classList.add("delete");
 const spanDelete = document.createElement("span");
+
 spanDelete.classList.add("fas");
 spanDelete.classList.add("fa-trash");
 
-addExpense.addEventListener("click", () => {
-  dispExpenses.textContent = +dispExpenses.textContent + +expenseAmount.value;
-  dispBalance.textContent = budget.value - dispExpenses.textContent;
+button.appendChild(spanDelete);
+expenseValueParagraph.appendChild(button);
 
-  expenseTitleDiv.appendChild(expenseTitleParagraph);
-  expenseValueDiv.appendChild(expenseValueParagraph);
 
-  expenseValueParagraph.appendChild(spanDelete);
-});
+  
+  
 
-spanDelete.addEventListener("click", () => {
-  console.log("mkckckkck");
+ 
+  button.addEventListener("click", () => {
+    expenseValueParagraph.textContent="";
+   expenseTitleParagraph.textContent="";
+
+   dispExpenses.textContent = +dispExpenses.textContent - +expenseAmount.value;
+   dispBalance.textContent =+ dispBalance.textContent  + + expenseAmount.value;
+   
+  });
+ 
+  
+
   
 });
+
+

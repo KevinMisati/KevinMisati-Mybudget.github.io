@@ -47,6 +47,10 @@ body {
     border: 1px solid green;
     background-color: white;
 }
+.arrange button:hover{
+    background-color: green;
+    color: white;
+}
 .arrange label{
     margin: 5px;
 }
@@ -91,6 +95,11 @@ body {
     background-color: white;
     border: 1px solid red;
     margin: 0px 10px 0px 10px;
+}
+
+.button button:hover{
+     background-color: red;
+     color: white;
 }
 
 
@@ -146,6 +155,11 @@ button{
 .fa-trash:hover{
     color: hotpink;
 
+}
+button.delete{
+    border: none;
+    background-color: white;
+    display: inline-block;
 }
 
 @media(min-width:600px){
